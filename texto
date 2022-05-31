@@ -205,7 +205,7 @@ AND = e
 OR = OU
  CRUD - C DE CREATE, R DE READ, U DE update, d delete
 
- SELECT COUNT(ID) FROM tb_produto; = mostra total de itens cadastrados
+ SELECT COUNT(ID - pode ser qualquer coluna para ser referencia) FROM tb_produto; = mostra total de itens cadastrados
 
  SELECT MAX ou MIN(valor) ou FROM tb_nometabela; = mostra o maior valor dos produtos.
 
@@ -233,7 +233,7 @@ Atividades
 
 2->Listar os produtos com mais de 10 unidades no estoque - select * from tb_produto where quantidade >10;
 
-3->Listar os produtos com valor maior de 5000 - select * from tb_produto where valor >=5000;
+3->Listar os produtos com valor maior de 5000 - select * from tb_produto where valor > 5000;
 
 4->Listar os produtos em ordem alfabetica - select * from tb_produto order by produto;
 
@@ -243,14 +243,50 @@ Atividades
 
  7->Contar o total de produtos da fabricante Samsung - select count(quantidade) from tb_produto where produto like'%samsung%';
 
- 8->Somar o valor total de produtos da apple em estoque(criar a coluna total) - select produto,valor,quantidade,valor*quantidade as total from tb_produto where fabricante='Apple';
+ 8->Somar o valor total de produtos da apple em estoque(criar a coluna total) - select produto,valor,quantidade,valor*quantidade  as total from tb_produto where fabricante='Apple';
 
  9-> Listar os produtos com a palavra SMART no nome(usar like) -select * from tb_produto where produto like '%smart%';
 
-10-> Listar os produtos da marca bosh e funko - 
-SELECT * FROM tb_nometabela fabricante= 'nome' or fabricante='nome'; - vai mostrar os produtos das fabricantes selecionadas
+10-> Listar os produtos da marca bosch e funko - 
+select * from tb_produto where fabricante='funko' or fabricante='bosch';
 
-11-> Listar os produtos da categoria 11 (games)
+11-> Listar os produtos da categoria 11 (games) - select * from tb_produto where id_categoria=11;
+
+12-> Listar apenas o produto e valor por ordem do menor para o maior valor - select produto,valor as total from tb_produto order by valor;
+ou select produto,valor from tb_produto order by valor;
+
+13-> Contar o total de produtos em estoque(geral) -
+ select sum(quantidade) from tb_produto;
+ ou select count(id) from tb_produto;
+
+14-> Listar o maior valor de produto - select max(valor) from tb_produto;
+ou select * from tb_produto order by valor desc limit 1; (mostra qual é o produto além do valor)
+
+
+AULA 30-05
+
+update e delete precisa usar com where, não tem ctrl z, usou não tem volta
+
+
+update - atualiza os dados 
+
+UPDATE tb_produto SET valor (pode ser qualquer campo da tabela, lembrando que texto precisa estar dentro de '', numero não!) = 1400 WHERE id = 1; atualizar a tabela produto e set (mudar) o valor de 1400, na id 1 , se não colocar o where vai alterar todos os produtos. 
+
+INSERT INTO tb_categoria (categoria) VALUES ('Brinquedos'); insere nova categoria 
+
+UPDATE tb_produto SET quantidade =33 WHERE id IN(3,5,10); o in é que naqueles itens vão ser alterados.
+
+UPDATE tb_produto SET quantidade =50 WHERE quantidade > 25; - altera os produtos que tem 25 de estoque para 50 unidades
+
+EXERCICIOS
+
+1 - atualizar o registro id 28 para o valor= 105 reais; - UPDATE tb_produto SET valor = 105 WHERE id = 28;
+
+2- atualizar o registro id_categoria 4 do produto id_categoria 10; UPDATE tb_produto SET id_categoria = 10 WHERE id=4;
+
+3 - atualizar o fabricante do id 21 para dell - UPDATE tb_produto SET fabricante = 'Dell' WHERE id=21;
+
+4 - atualizar o registro id 42 para fabricante = BikeCity e valor = 6800 - UPDATE tb_produto SET valor = 6800, fabricante = 'BikeCity' WHERE id=42;
  
 
 
