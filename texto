@@ -65,6 +65,10 @@ Alternativas
 Wordbench
 PHPMyAdmin
 
+brModelo - modelagem de dados
+Desenvolver o software - precisa de uma documentação, fazer o modelo do banco de dados no BrModelo.
+Planejamento - desenvolver - testar - melhorias - é um ciclo 
+
 RESUMO DO AMBIENTE DE DESENVOLVIMENTO WEB
 Será necessário:
 VS Code
@@ -156,6 +160,7 @@ Colunas
  autor VARCHAR(50) NN
  ano CHAR(4) NN
  valor FLOAT(6,2) NN
+ tempo char (4) NN
 
 Inserir 3 livros a seu critério
 
@@ -274,9 +279,11 @@ UPDATE tb_produto SET valor (pode ser qualquer campo da tabela, lembrando que te
 
 INSERT INTO tb_categoria (categoria) VALUES ('Brinquedos'); insere nova categoria 
 
-UPDATE tb_produto SET quantidade =33 WHERE id IN(3,5,10); o in é que naqueles itens vão ser alterados.
+UPDATE tb_produto SET quantidade =33 WHERE id IN(3,5,10); o in é que naqueles itens vão ser alterados em ordem que colocar.
 
 UPDATE tb_produto SET quantidade =50 WHERE quantidade > 25; - altera os produtos que tem 25 de estoque para 50 unidades
+
+SELECT * FROM tb_produto WHERE id=13; - mostra o item que quer ver.
 
 EXERCICIOS
 
@@ -287,6 +294,22 @@ EXERCICIOS
 3 - atualizar o fabricante do id 21 para dell - UPDATE tb_produto SET fabricante = 'Dell' WHERE id=21;
 
 4 - atualizar o registro id 42 para fabricante = BikeCity e valor = 6800 - UPDATE tb_produto SET valor = 6800, fabricante = 'BikeCity' WHERE id=42;
- 
+
+AULA 31-05
+
+DELETE - não pergunta se tem certeza, precisa ter sempre bkp. - sempre colocar where
+
+DELETE FROM tb_produto WHERE id=13; - deleta o item selecionado
+DELETE FROM tb_produto WHERE id IN(3,16,27); deleta itens selecionados
+
+ALTER = para alterar alguma estrutura da tabela.
+
+ALTER TABLE tb_filmes ADD genero VARCHAR(15) NOT null; - inclui um campo na tabela
+
+ ALTER TABLE tb_filmes ADD tempo CHAR(4) NOT NULL AFTER ano; adiciona campo tempo depois do ano. sempre depois da coluna selecionada.
+
+ ALTER TABLE tb_filmes CHANGE lançamento lancamento CHAR (4) NOT NULL; altera nome da coluna
+
+ ALTER TABLE tb_filmes DROP genero; - alterar a tabela e retirar o campo selecionado
 
 
