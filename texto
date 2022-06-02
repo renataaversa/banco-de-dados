@@ -313,3 +313,14 @@ ALTER TABLE tb_filmes ADD genero VARCHAR(15) NOT null; - inclui um campo na tabe
  ALTER TABLE tb_filmes DROP genero; - alterar a tabela e retirar o campo selecionado
 
 
+ AULA 01-06
+
+ Modelo de banco de dados = MER - Modelo Entidade Relacionamento - é fazer o banco de dados de forma visual, um diagrama.
+ 
+ Programa BrModelo para desenhar o diagrama, existem outros .
+
+ NORMALIZAÇÃO de um campo - é dar identificação a um campo no banco de dados. (exemplos = Id e categoria, id e genero)
+
+ 
+
+
