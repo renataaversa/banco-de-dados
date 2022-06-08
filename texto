@@ -321,6 +321,27 @@ ALTER TABLE tb_filmes ADD genero VARCHAR(15) NOT null; - inclui um campo na tabe
 
  NORMALIZAÇÃO de um campo - é dar identificação a um campo no banco de dados. (exemplos = Id e categoria, id e genero)
 
- 
+ ___________________________________________________________
+ AULA 07-06
+
+ Programa - MySQL Workbench
+
+ Criando diagrama: create database:
+ Charset/Collation: usar utf8 e uft8_genereal_ci - vai reconhecer os caracteres
+
+ Unsigned (UN) = não deixar negativo
+
+ Datatype: Bit - aceita 0 e 1 - para guardar se ativo ou não por exemplo - definir em NN e precisa colocar no Default qual é o ativo com o numero 1
+
+ Datatype: datetime - marca data e hora atual - definir em NN e precisa colocar no Default now() 
 
 
+
+
+1	Volkswagem	1
+2	Fiat	1
+3	Hyundai	1
+4	Ford	1
+5	Jeep	1
+6	Toyota	1
+7	Chevrolet	1
