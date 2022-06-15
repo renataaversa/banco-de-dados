@@ -333,28 +333,11 @@ ALTER TABLE tb_filmes ADD genero VARCHAR(15) NOT null; - inclui um campo na tabe
 
  Datatype: Bit - aceita 0 e 1 - para guardar se ativo ou não por exemplo - definir em NN e precisa colocar no Default qual é o ativo com o numero 1
 
- Datatype: datetime - marca data e hora atual - definir em NN e precisa colocar no Default now() 
+ Datatype: datetime - marca data e hora atual - definir em NN e precisa colocar no Default now() - now é uma função
 
 
+AULA 14/06
 
+Relacionamento de muitas tabelas precisa criar uma nova tabela para esses relacionamentos.
 
-Plataforma
-1	Videogame
-2	PC
-3	Tabuleiro
-4	Fisico
-5	Mobile
-
-fabricante
-1	Xbox
-2	PlayStation
-3	Nintendo
-4	Mattel
-5	Estrela
-6	Grow
-7 Disney
-8 Copag
-
-16 - quinta = feriado, 17 - sexta não tem aula
-24 - sexta = feriado
 
