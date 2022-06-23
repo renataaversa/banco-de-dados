@@ -340,4 +340,13 @@ AULA 14/06
 
 Relacionamento de muitas tabelas precisa criar uma nova tabela para esses relacionamentos.
 
+AULA 22/06
+front - html, css e Java
+backend - php e mysql
+
+para enviar os dados do java para o backend precisa escolher entre Ajax (script externo, não recarrega a pagina inteira), Axios (script externo) ou Fetcm (nativo - request = requisição e response = resposta)
+
+
+para conectar com o banco de dados = msqli ou pod (esse dá suporte para 12 tipos de banco de dados)
+
 
