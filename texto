@@ -350,6 +350,37 @@ para enviar os dados do java para o backend precisa escolher entre Ajax (script 
 para conectar com o banco de dados = msqli ou pod (esse dá suporte para 12 tipos de banco de dados)
 
 
-AULA 23-06
 
 
+AULA 04/07
+
+join = mostrar união com outra tabela comando INNER JOIN
+SELECT 
+	* 
+FROM (vai mostrar todas as colunas da tabela, o que não é indicado)
+	tb_livros 
+INNER JOIN
+	tb_categorias
+ON tb_livros.id_categorias = tb_categorias.id
+
+
+SELECT (colocando as colunas que quer mostrar fica mais seguro, mostrando somente o que realmente precisa.)
+	tb_livros.id, 
+	tb_livros.autor,
+	tb_livros.valor,
+	tb_categorias.categoria
+FROM 
+	tb_livros 
+INNER JOIN
+	tb_categorias
+ON tb_livros.id_categorias = tb_categorias.id
+
+
+
+
+
+
+SELECT 
+	* 
+FROM 
+	tb_livros l = criar um apelido na tabela - colocar uma letra na frente do nome da tabela
